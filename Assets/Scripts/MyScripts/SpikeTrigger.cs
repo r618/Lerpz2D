@@ -6,6 +6,6 @@ public class SpikeTrigger : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        transform.FindChild("SpikeBall").SendMessage("OnTriggerEnter", other, SendMessageOptions.RequireReceiver);
+        transform.Find("SpikeBall").SendMessage("OnTriggerEnter", other, SendMessageOptions.RequireReceiver);
     }
 }
