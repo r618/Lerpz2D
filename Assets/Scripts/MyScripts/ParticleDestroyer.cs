@@ -6,12 +6,12 @@ public class ParticleDestroyer : MonoBehaviour
 
     void Update()
     {
-        if (!gameObject.particleSystem.IsAlive())
+        if (!gameObject.GetComponent<ParticleSystem>().IsAlive())
             Destroy(gameObject);
     }
 
     public void Stop()
     {
-        gameObject.particleSystem.Stop();
+        gameObject.GetComponent<ParticleSystem>().Stop();
     }
 }
