@@ -30,12 +30,12 @@ public class TwoDHelper : MonoBehaviour
 		    // Make sure that the transform has a rigidbody.
 		    Rigidbody rigidbody = (Rigidbody)transform.GetComponent ("Rigidbody");
 		    if (!rigidbody)
-			    transform.gameObject.AddComponent ("Rigidbody");
+			    transform.gameObject.AddComponent <Rigidbody>();
 		
 		    // Make sure that here is also a ConfigurableJoint
 		    ConfigurableJoint configurableJoint = (ConfigurableJoint)transform.GetComponent ("ConfigurableJoint");	
 		    if (!configurableJoint)
-			    configurableJoint = transform.gameObject.AddComponent ("ConfigurableJoint") as ConfigurableJoint;
+			    configurableJoint = transform.gameObject.AddComponent <ConfigurableJoint>() as ConfigurableJoint;
 		
 		    // Make the joint force the object to only move in the XY plane and only rotate around Z
 		    configurableJoint.xMotion = ConfigurableJointMotion.Free;
@@ -45,7 +45,7 @@ public class TwoDHelper : MonoBehaviour
 		    configurableJoint.angularYMotion = ConfigurableJointMotion.Locked;
 		    configurableJoint.angularZMotion = ConfigurableJointMotion.Free;
 
-            transform.gameObject.rigidbody.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
+            transform.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
 	    }	
     }
 

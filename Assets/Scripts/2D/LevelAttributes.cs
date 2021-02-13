@@ -45,25 +45,25 @@ public class LevelAttributes : MonoBehaviour
 	
 	    GameObject leftBoundary = new GameObject ("Left Boundary");
 	    leftBoundary.transform.parent = createdBoundaries.transform;
-        BoxCollider boxCollider = leftBoundary.AddComponent("BoxCollider") as BoxCollider;
+        BoxCollider boxCollider = leftBoundary.AddComponent<BoxCollider>() as BoxCollider;
 	    boxCollider.size = new Vector3 (colliderThickness, bounds.height + colliderThickness * 2.0f + fallOutBuffer, colliderThickness);
 	    boxCollider.center = new Vector3 (bounds.xMin - colliderThickness * 0.5f, bounds.y + bounds.height * 0.5f - fallOutBuffer * 0.5f, 0.0f);
 	
 	    GameObject rightBoundary = new GameObject ("Right Boundary");
 	    rightBoundary.transform.parent = createdBoundaries.transform;
-	    boxCollider = rightBoundary.AddComponent ("BoxCollider") as BoxCollider;
+	    boxCollider = rightBoundary.AddComponent <BoxCollider>() as BoxCollider;
 	    boxCollider.size = new Vector3 (colliderThickness, bounds.height + colliderThickness * 2.0f + fallOutBuffer, colliderThickness);
 	    boxCollider.center = new Vector3 (bounds.xMax + colliderThickness * 0.5f, bounds.y + bounds.height * 0.5f - fallOutBuffer * 0.5f, 0.0f);
 	
 	    GameObject topBoundary = new GameObject ("Top Boundary");
 	    topBoundary.transform.parent = createdBoundaries.transform;
-        boxCollider = topBoundary.AddComponent("BoxCollider") as BoxCollider;
+        boxCollider = topBoundary.AddComponent<BoxCollider>() as BoxCollider;
 	    boxCollider.size = new Vector3 (bounds.width + colliderThickness * 2.0f, colliderThickness, colliderThickness);
 	    boxCollider.center = new Vector3 (bounds.x + bounds.width * 0.5f, bounds.yMax + colliderThickness * 0.5f, 0.0f);
 	
 	    GameObject bottomBoundary = new GameObject ("Bottom Boundary (Including Fallout Buffer)");
 	    bottomBoundary.transform.parent = createdBoundaries.transform;
-        boxCollider = bottomBoundary.AddComponent("BoxCollider") as BoxCollider;
+        boxCollider = bottomBoundary.AddComponent<BoxCollider>() as BoxCollider;
 	    boxCollider.size = new Vector3 (bounds.width + colliderThickness * 2.0f, colliderThickness, colliderThickness);
 	    boxCollider.center = new Vector3 (bounds.x + bounds.width * 0.5f, bounds.yMin - colliderThickness * 0.5f - fallOutBuffer, 0.0f);
     }

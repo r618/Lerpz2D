@@ -23,7 +23,7 @@ public class GameData : MonoBehaviour
             if (instance == null)
             {
                 GameObject newGO = new GameObject("new name");
-                newGO.AddComponent("GameData");
+                newGO.AddComponent<GameData>();
                 instance = newGO.GetComponent<GameData>();
                 instance.Deaths = 0;
                 instance.Coins = 0;

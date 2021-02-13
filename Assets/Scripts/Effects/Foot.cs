@@ -27,7 +27,7 @@ public class Foot : MonoBehaviour {
     //}
 
     void Reset() {
-	    rigidbody.isKinematic = true;
+	    GetComponent<Rigidbody>().isKinematic = true;
 	   // collider.isTrigger = true;
     }
 }
