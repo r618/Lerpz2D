@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class EndScene : MonoBehaviour
 {
@@ -22,7 +22,7 @@ public class EndScene : MonoBehaviour
 
         if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 70, 200, 30), "Play"))
         {
-            Application.LoadLevel("Level_1");
+            SceneManager.LoadScene("Level_1");
         }
         if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 110, 200, 30), "Exit"))
         {

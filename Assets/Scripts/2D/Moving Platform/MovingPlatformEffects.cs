@@ -36,9 +36,10 @@ public class MovingPlatformEffects : MonoBehaviour
 	    // This saves needless computation.
 	    if (wereEmittersOn != areEmittersOn) {
 		    // Get every child ParticleEmitter in the moving platform.
-		    foreach (ParticleEmitter emitter in GetComponentsInChildren<ParticleEmitter>()) {
-			    //Simply set them to emit or not emit depending on the value of areEmittersOn
-			    emitter.emit = areEmittersOn;
+		    foreach (var emitter in GetComponentsInChildren<ParticleSystem>()) {
+				//Simply set them to emit or not emit depending on the value of areEmittersOn
+				if (areEmittersOn)
+					emitter.Play();
 		    }
 	    }
     }

@@ -282,9 +282,10 @@ public class PlatformerController : MonoBehaviour
         // By comparing the previous value of areEmittersOn to the new one, we will only update the particle emitters when needed
         if (wereEmittersOn != areEmittersOn)
         {
-            foreach (ParticleEmitter emitter in GetComponentsInChildren<ParticleEmitter>())
+            foreach (var emitter in GetComponentsInChildren<ParticleSystem>())
             {
-                emitter.emit = areEmittersOn;
+                if (areEmittersOn)
+                    emitter.Play();
             }
         }
     }

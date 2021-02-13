@@ -1,13 +1,14 @@
 using UnityEngine;
-using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class EndScreen : MonoBehaviour {
+public class EndScreen : MonoBehaviour
+{
 
     void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            Application.LoadLevel("EndScreen");
+            SceneManager.LoadScene("EndScreen");
         }
     }
 }

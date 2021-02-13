@@ -17,12 +17,13 @@ public class SpecialEffectHandler : MonoBehaviour {
 	    if (on != effectActive) {
 		
 		    // Find a list of all ParticleEmitters that are in this object's transform children
-		    ParticleEmitter[] childEmitters = GetComponentsInChildren<ParticleEmitter>();
+		    var childEmitters = GetComponentsInChildren<ParticleSystem>();
 		
 		    // Go over all them
-		    foreach (ParticleEmitter emitter in childEmitters) {
-			    // turn them on or off
-			    emitter.emit = on;
+		    foreach (var emitter in childEmitters) {
+				// turn them on or off
+				if (on)
+					emitter.Play();
 		    }
 		
 		    effectActive = on;
