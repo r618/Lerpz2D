@@ -93,10 +93,10 @@ public class Spaceship : MonoBehaviour {
 	
 	    //Use the MovementSettings class to determine which drag constant should be used for the positional movement.
 	    //Remember the MovementSettings class is a helper class we defined ourselves. See the top of this script.
-	    GetComponent<Rigidbody>().drag = positionalMovement.ComputeDrag (thrust, GetComponent<Rigidbody>().velocity);
+	    rigidbody.drag = positionalMovement.ComputeDrag (thrust, rigidbody.velocity);
 
 	    //Then determine which drag constant should be used for the angular movement.
-	    GetComponent<Rigidbody>().angularDrag = rotationalMovement.ComputeDrag (turn, GetComponent<Rigidbody>().angularVelocity);
+	    rigidbody.angularDrag = rotationalMovement.ComputeDrag (turn, rigidbody.angularVelocity);
 	
 	    //Determines which direction the positional and rotational motion is occurring, and then modifies thrust/turn with the given accelerations. 
 	    //If you are not familiar with the ?: conditional, it is basically shorthand for an "if..else" statement pair.  See http://www.javascriptkit.com/jsref/conditionals.shtml
@@ -106,8 +106,8 @@ public class Spaceship : MonoBehaviour {
 	    // Add torque and force to the rigidbody.  Torque will rotate the body and force will move it.
 	    // Always modify your forces by Time.deltaTime in FixedUpdate (), so if you ever need to change your Time.fixedTime setting,
 	    // your setup won't break.
- 	    GetComponent<Rigidbody>().AddRelativeTorque (new Vector3(0.0f, 0.0f, -1.0f) * turn * Time.deltaTime, ForceMode.VelocityChange);
-	    GetComponent<Rigidbody>().AddRelativeForce (forwardDirection * thrust * Time.deltaTime, ForceMode.VelocityChange);
+ 	    rigidbody.AddRelativeTorque (new Vector3(0.0f, 0.0f, -1.0f) * turn * Time.deltaTime, ForceMode.VelocityChange);
+	    rigidbody.AddRelativeForce (forwardDirection * thrust * Time.deltaTime, ForceMode.VelocityChange);
     }
 
     // This function allows us to SendMessage to an object to set whether or not the player can control it
@@ -156,10 +156,10 @@ public class Spaceship : MonoBehaviour {
 
 	    // If collisionSoundEffect isn't null, get the audio clip, set the volume, and play.
 	    if (collisionSoundEffect) {
-		    GetComponent<AudioSource>().clip = collisionSoundEffect.audioClip;
+		    audio.clip = collisionSoundEffect.audioClip;
 		    // By multiplying by collision.relativeVelocity.sqrMagnitude, the sound will be louder for faster impacts.
-		    GetComponent<AudioSource>().volume = collisionSoundEffect.volumeModifier * collision.relativeVelocity.sqrMagnitude * specialEffects.collisionVolume;
-		    GetComponent<AudioSource>().Play ();		
+		    audio.volume = collisionSoundEffect.volumeModifier * collision.relativeVelocity.sqrMagnitude * specialEffects.collisionVolume;
+		    audio.Play ();		
 	    }
     }
 

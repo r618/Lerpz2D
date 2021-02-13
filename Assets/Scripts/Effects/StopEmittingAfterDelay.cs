@@ -17,6 +17,6 @@ public class StopEmittingAfterDelay : MonoBehaviour {
         yield return new WaitForSeconds(delay);
 
         // Then we turn of the particle emitter
-        GetComponent<ParticleEmitter>().emit = false;
+        particleEmitter.emit = false;
     }
 }

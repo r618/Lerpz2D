@@ -19,33 +19,33 @@ public class PlatformerPlayerAnimation : MonoBehaviour
 
     void Start()
     {
-        GetComponent<Animation>().Stop();
+        animation.Stop();
 
         // By default loop all animations
-        GetComponent<Animation>().wrapMode = WrapMode.Loop;
+        animation.wrapMode = WrapMode.Loop;
 
         // Jump animation are in a higher layer:
         // Thus when a jump animation is playing it will automatically override all other animations until it is faded out.
         // This simplifies the animation script because we can just keep playing the walk / run / idle cycle without having to spcial case jumping animations.
         int jumpingLayer = 1;
-        AnimationState jump = GetComponent<Animation>()["jump"];
+        AnimationState jump = animation["jump"];
         jump.layer = jumpingLayer;
         jump.speed *= jumpAnimationSpeedModifier;
         jump.wrapMode = WrapMode.Once;
 
-        AnimationState jumpFall = GetComponent<Animation>()["jumpFall"];
+        AnimationState jumpFall = animation["jumpFall"];
         jumpFall.layer = jumpingLayer;
         jumpFall.wrapMode = WrapMode.ClampForever;
 
-        AnimationState jumpLand = GetComponent<Animation>()["jumpLand"];
+        AnimationState jumpLand = animation["jumpLand"];
         jumpLand.layer = jumpingLayer;
         jumpLand.speed *= jumpLandAnimationSpeedModifier;
         jumpLand.wrapMode = WrapMode.Once;
 
-        AnimationState run = GetComponent<Animation>()["run"];
+        AnimationState run = animation["run"];
         run.speed *= runAnimationSpeedModifier;
 
-        AnimationState walk = GetComponent<Animation>()["walk"];
+        AnimationState walk = animation["walk"];
         walk.speed *= walkAnimationSpeedModifier;
     }
 
@@ -58,30 +58,30 @@ public class PlatformerPlayerAnimation : MonoBehaviour
 		if (controller.IsMoving())
 		{
 			if (Input.GetButton ("Fire2"))
-				GetComponent<Animation>().CrossFade ("run");
+				animation.CrossFade ("run");
 			else
-				GetComponent<Animation>().CrossFade ("walk");
+				animation.CrossFade ("walk");
 		}
 		// Go back to idle when not moving
 		else
-			GetComponent<Animation>().CrossFade ("idle", 0.5f);
+			animation.CrossFade ("idle", 0.5f);
 	}
 	// When falling off an edge, after hangTimeUntilFallingAnimation we will fade towards the ledgeFall animation
 	else {
-		GetComponent<Animation>().CrossFade ("ledgeFall");
+		animation.CrossFade ("ledgeFall");
 	}
 }
 
     void DidJump()
     {
-        GetComponent<Animation>().Play("jump");
-        GetComponent<Animation>().PlayQueued("jumpFall");
+        animation.Play("jump");
+        animation.PlayQueued("jumpFall");
     }
 
     void DidLand()
     {
-        GetComponent<Animation>().Stop("jumpFall");
-        GetComponent<Animation>().Play("jumpLand");
-        GetComponent<Animation>().Blend("jumpLand", 0);
+        animation.Stop("jumpFall");
+        animation.Play("jumpLand");
+        animation.Blend("jumpLand", 0);
     }
 }

@@ -22,15 +22,15 @@ public class SpikeBallMovement : MonoBehaviour
         {
             attack = false;
             reset = false;
-            GetComponent<Rigidbody>().AddForce(Vector3.down * resetSpeed);
+            rigidbody.AddForce(Vector3.down * resetSpeed);
             transform.position = resetPosition;
         }
         if (attack && !reset && transform.localPosition.y < 0)
         {
             reset = true;
-            GetComponent<Rigidbody>().velocity = Vector3.zero;
-            GetComponent<Rigidbody>().AddForce(Vector3.up * (resetSpeed));
-            GetComponent<AudioSource>().Play();
+            rigidbody.velocity = Vector3.zero;
+            rigidbody.AddForce(Vector3.up * (resetSpeed));
+            audio.Play();
         }
     }
 
@@ -39,7 +39,7 @@ public class SpikeBallMovement : MonoBehaviour
         if (other.gameObject.tag == "Player" && !attack)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y - 0.1f, transform.position.z);
-            GetComponent<Rigidbody>().AddForce(Vector3.down * attackSpeed);
+            rigidbody.AddForce(Vector3.down * attackSpeed);
             attack = true;
         }
     }

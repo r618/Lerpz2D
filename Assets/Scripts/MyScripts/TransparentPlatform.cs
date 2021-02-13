@@ -28,7 +28,7 @@ public class TransparentPlatform : MonoBehaviour
             if (trigger)
             {
                 r.material.shader = shader;
-                r.GetComponent<Collider>().isTrigger = trigger;
+                r.collider.isTrigger = trigger;
             }
         }
     }

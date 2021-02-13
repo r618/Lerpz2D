@@ -407,7 +407,7 @@ public class PlatformerController : MonoBehaviour
         {
             gameObject.SendMessageUpwards("SpawnPoint", SendMessageOptions.DontRequireReceiver);
             spawnPoint = other.gameObject.transform;
-            other.gameObject.GetComponent<Collider>().enabled = false;
+            other.gameObject.collider.enabled = false;
             other.gameObject.transform.parent.FindChild("SpawnParticles").GetComponent<ParticleDestroyer>().Stop();
         }
     }
