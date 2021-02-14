@@ -1,131 +1,321 @@
 fileFormatVersion: 2
 guid: e7da0a6b88725fd49be111412a5416be
 ModelImporter:
-  serializedVersion: 16
-  fileIDToRecycleName:
-    100000: Lo_Clip1_Straight
-    100002: Lo_Targeter_Sight
-    100004: Lo_Targeter_Base
-    100006: Lo_Clip2_Bent
-    100008: Lo_Scope
-    100010: Lo_Buttstock
-    100012: Lo_Grip
-    100014: Lo_ForeStock
-    100016: //RootNode
-    100018: Lo_Barrel
-    100020: Lo_FingerGuard
-    100022: Lo_Trigger
-    100024: Lo_Body
-    100026: Lo_Muzzle
-    100028: Lo_Acc1
-    400000: Lo_Clip1_Straight
-    400002: Lo_Targeter_Sight
-    400004: Lo_Targeter_Base
-    400006: Lo_Clip2_Bent
-    400008: Lo_Scope
-    400010: Lo_Buttstock
-    400012: Lo_Grip
-    400014: Lo_ForeStock
-    400016: //RootNode
-    400018: Lo_Barrel
-    400020: Lo_FingerGuard
-    400022: Lo_Trigger
-    400024: Lo_Body
-    400026: Lo_Muzzle
-    400028: Lo_Acc1
-    2300000: Lo_Clip1_Straight
-    2300002: Lo_Targeter_Sight
-    2300004: Lo_Targeter_Base
-    2300006: Lo_Clip2_Bent
-    2300008: Lo_Scope
-    2300010: Lo_Buttstock
-    2300012: Lo_Grip
-    2300014: Lo_ForeStock
-    2300016: Lo_Barrel
-    2300018: Lo_FingerGuard
-    2300020: Lo_Trigger
-    2300022: Lo_Body
-    2300024: Lo_Muzzle
-    2300026: Lo_Acc1
-    3300000: Lo_Clip1_Straight
-    3300002: Lo_Targeter_Sight
-    3300004: Lo_Targeter_Base
-    3300006: Lo_Clip2_Bent
-    3300008: Lo_Scope
-    3300010: Lo_Buttstock
-    3300012: Lo_Grip
-    3300014: Lo_ForeStock
-    3300016: Lo_Barrel
-    3300018: Lo_FingerGuard
-    3300020: Lo_Trigger
-    3300022: Lo_Body
-    3300024: Lo_Muzzle
-    3300026: Lo_Acc1
-    4300000: Lo_ForeStock
-    4300002: Lo_Grip
-    4300004: Lo_Buttstock
-    4300006: Lo_Body
-    4300008: Lo_Trigger
-    4300010: Lo_FingerGuard
-    4300012: Lo_Barrel
-    4300014: Lo_Acc1
-    4300016: Lo_Muzzle
-    4300018: Lo_Targeter_Base
-    4300020: Lo_Targeter_Sight
-    4300022: Lo_Scope
-    4300024: Lo_Clip1_Straight
-    4300026: Lo_Clip2_Bent
-    11100000: //RootNode
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Lo_Clip1_Straight
+  - first:
+      1: 100002
+    second: Lo_Targeter_Sight
+  - first:
+      1: 100004
+    second: Lo_Targeter_Base
+  - first:
+      1: 100006
+    second: Lo_Clip2_Bent
+  - first:
+      1: 100008
+    second: Lo_Scope
+  - first:
+      1: 100010
+    second: Lo_Buttstock
+  - first:
+      1: 100012
+    second: Lo_Grip
+  - first:
+      1: 100014
+    second: Lo_ForeStock
+  - first:
+      1: 100016
+    second: //RootNode
+  - first:
+      1: 100018
+    second: Lo_Barrel
+  - first:
+      1: 100020
+    second: Lo_FingerGuard
+  - first:
+      1: 100022
+    second: Lo_Trigger
+  - first:
+      1: 100024
+    second: Lo_Body
+  - first:
+      1: 100026
+    second: Lo_Muzzle
+  - first:
+      1: 100028
+    second: Lo_Acc1
+  - first:
+      4: 400000
+    second: Lo_Clip1_Straight
+  - first:
+      4: 400002
+    second: Lo_Targeter_Sight
+  - first:
+      4: 400004
+    second: Lo_Targeter_Base
+  - first:
+      4: 400006
+    second: Lo_Clip2_Bent
+  - first:
+      4: 400008
+    second: Lo_Scope
+  - first:
+      4: 400010
+    second: Lo_Buttstock
+  - first:
+      4: 400012
+    second: Lo_Grip
+  - first:
+      4: 400014
+    second: Lo_ForeStock
+  - first:
+      4: 400016
+    second: //RootNode
+  - first:
+      4: 400018
+    second: Lo_Barrel
+  - first:
+      4: 400020
+    second: Lo_FingerGuard
+  - first:
+      4: 400022
+    second: Lo_Trigger
+  - first:
+      4: 400024
+    second: Lo_Body
+  - first:
+      4: 400026
+    second: Lo_Muzzle
+  - first:
+      4: 400028
+    second: Lo_Acc1
+  - first:
+      23: 2300000
+    second: Lo_Clip1_Straight
+  - first:
+      23: 2300002
+    second: Lo_Targeter_Sight
+  - first:
+      23: 2300004
+    second: Lo_Targeter_Base
+  - first:
+      23: 2300006
+    second: Lo_Clip2_Bent
+  - first:
+      23: 2300008
+    second: Lo_Scope
+  - first:
+      23: 2300010
+    second: Lo_Buttstock
+  - first:
+      23: 2300012
+    second: Lo_Grip
+  - first:
+      23: 2300014
+    second: Lo_ForeStock
+  - first:
+      23: 2300016
+    second: Lo_Barrel
+  - first:
+      23: 2300018
+    second: Lo_FingerGuard
+  - first:
+      23: 2300020
+    second: Lo_Trigger
+  - first:
+      23: 2300022
+    second: Lo_Body
+  - first:
+      23: 2300024
+    second: Lo_Muzzle
+  - first:
+      23: 2300026
+    second: Lo_Acc1
+  - first:
+      33: 3300000
+    second: Lo_Clip1_Straight
+  - first:
+      33: 3300002
+    second: Lo_Targeter_Sight
+  - first:
+      33: 3300004
+    second: Lo_Targeter_Base
+  - first:
+      33: 3300006
+    second: Lo_Clip2_Bent
+  - first:
+      33: 3300008
+    second: Lo_Scope
+  - first:
+      33: 3300010
+    second: Lo_Buttstock
+  - first:
+      33: 3300012
+    second: Lo_Grip
+  - first:
+      33: 3300014
+    second: Lo_ForeStock
+  - first:
+      33: 3300016
+    second: Lo_Barrel
+  - first:
+      33: 3300018
+    second: Lo_FingerGuard
+  - first:
+      33: 3300020
+    second: Lo_Trigger
+  - first:
+      33: 3300022
+    second: Lo_Body
+  - first:
+      33: 3300024
+    second: Lo_Muzzle
+  - first:
+      33: 3300026
+    second: Lo_Acc1
+  - first:
+      43: 4300000
+    second: Lo_ForeStock
+  - first:
+      43: 4300002
+    second: Lo_Grip
+  - first:
+      43: 4300004
+    second: Lo_Buttstock
+  - first:
+      43: 4300006
+    second: Lo_Body
+  - first:
+      43: 4300008
+    second: Lo_Trigger
+  - first:
+      43: 4300010
+    second: Lo_FingerGuard
+  - first:
+      43: 4300012
+    second: Lo_Barrel
+  - first:
+      43: 4300014
+    second: Lo_Acc1
+  - first:
+      43: 4300016
+    second: Lo_Muzzle
+  - first:
+      43: 4300018
+    second: Lo_Targeter_Base
+  - first:
+      43: 4300020
+    second: Lo_Targeter_Sight
+  - first:
+      43: 4300022
+    second: Lo_Scope
+  - first:
+      43: 4300024
+    second: Lo_Clip1_Straight
+  - first:
+      43: 4300026
+    second: Lo_Clip2_Bent
+  - first:
+      111: 11100000
+    second: //RootNode
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
+    resampleCurves: 1
     optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
-    animationRotationError: .5
-    animationPositionError: .5
-    animationScaleError: .5
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00999999978
+    globalScale: 0.01
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
+    keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
-    splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 1
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
-    armTwist: .5
-    foreArmTwist: .5
-    upperLegTwist: .5
-    legTwist: .5
-    armStretch: .0500000007
-    legStretch: .0500000007
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.01
     rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 1
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 1
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 
